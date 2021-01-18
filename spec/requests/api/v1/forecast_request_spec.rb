@@ -11,5 +11,6 @@ describe 'Forecast API' do
     expect(json[:data][:attributes][:hourly]).to be_a(Array)
     expect(json[:data][:attributes][:daily]).to be_a(Array)
     expect(json[:data][:attributes][:daily].length).to eq(8)
+    expect(json[:data][:id]).to eq(nil)
   end
 end

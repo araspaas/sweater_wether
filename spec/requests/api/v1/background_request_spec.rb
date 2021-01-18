@@ -8,5 +8,6 @@ describe 'Background API' do
 
     expect(json[:data]).to be_a(Hash)
     expect(json[:data][:attributes][:image_url][0]).to be_a(String)
+    expect(json[:data][:id]).to eq(nil)
   end
 end
