@@ -7,7 +7,7 @@ describe 'Yelp Fusion API' do
     json = JSON.parse(response.body, symbolize_names: true)
     binding.pry
     expect(json[:data]).to be_a(Hash)
-    expect(json[:data][:attributes][:destination_city]).to be_a(String)
+    expect(json[:data][:attributes][:destination_city]).to be_a(Hash)
     expect(json[:data][:attributes][:travel_time]).to be_a(String)
     expect(json[:data][:attributes][:forecast]).to be_a(Hash)
     expect(json[:data][:attributes][:forecast][:summary]).to be_a(String)

@@ -26,6 +26,15 @@ class Yelp
   end
 
   def destination_city
+    destination = json ||= LocationService.new.get_location(@location)
+    json[:results][0][:locations][0][:latLng]
+  end
+
+  def travel_time
+
+  end
+
+  def restaraunt
 
   end
 end
