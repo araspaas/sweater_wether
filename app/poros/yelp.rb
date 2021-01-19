@@ -22,19 +22,19 @@ class Yelp
   end
 
   def start_city
-
+    #code goes here
   end
 
   def destination_city
-    destination = json ||= LocationService.new.get_location(@location)
+    json ||= LocationService.new.get_location(@location)
     json[:results][0][:locations][0][:latLng]
   end
 
   def travel_time
-
+    binding.pry
   end
 
   def restaraunt
-
+    #code goes here
   end
 end
