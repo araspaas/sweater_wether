@@ -5,7 +5,6 @@ Rails.application.routes.draw do
       resources :forecast, only: [:index]
       resources :backgrounds, only: [:index]
       resources :users, only: [:create]
-      get '/munchies', to: 'yelp#index'
     end
   end
 end
