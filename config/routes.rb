@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       resources :forecast, only: [:index]
       resources :backgrounds, only: [:index]
       resources :users, only: [:create]
+      post '/road_trip', to: 'road_trip#create'
     end
   end
 end
