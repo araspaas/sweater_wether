@@ -1,22 +1,11 @@
 class Forecast
+  attr_reader :current_weather,
+              :daily_weather,
+              :hourly_weather
 
-  attr_reader :location,
-              :current,
-              :hourly,
-              :daily,
-              :fake_id
-
-  def initialize(destination, latitude, longitude)
-    @location = destination
-    @latitude = latitude
-    @longitude = longitude
-    @current = forecast[:current]
-    @hourly = forecast[:hourly]
-    @daily = forecast[:daily]
-    @fake_id = nil
-  end
-
-  def forecast
-    WeatherService.new.get_forecast(@latitude, @longitude)
+  def initialize(current_weather, daily_weather, hourly_weather)
+    @current_weather = current_weather
+    @daily_weather = daily_weather
+    @hourly_weather = hourly_weather
   end
 end
