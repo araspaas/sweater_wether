@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       resources :backgrounds, only: [:index]
       resources :users, only: [:create]
       post '/road_trip', to: 'road_trip#create'
+      get '/foodie', to: 'foodie#index'
     end
   end
 end
