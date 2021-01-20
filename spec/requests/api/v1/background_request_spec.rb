@@ -6,7 +6,6 @@ describe 'Background API' do
     expect(response).to be_successful
 
     json = JSON.parse(response.body, symbolize_names: true)
-    binding.pry
 
     expect(json).to be_a(Hash)
     expect(json).to have_key(:data)
