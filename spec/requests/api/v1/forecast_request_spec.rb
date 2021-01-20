@@ -56,7 +56,7 @@ describe 'Forecast API' do
     expect(json[:data][:attributes]).to have_key(:hourly_weather)
     expect(json[:data][:attributes][:hourly_weather]).to be_a Hash
     expect(json[:data][:attributes][:hourly_weather]).to have_key(:time)
-    expect(json[:data][:attributes][:hourly_weather][:time]).to be_a Integer
+    expect(json[:data][:attributes][:hourly_weather][:time]).to be_a String
     expect(json[:data][:attributes][:hourly_weather]).to have_key(:temperature)
     expect(json[:data][:attributes][:hourly_weather][:temperature]).to be_a Float
     expect(json[:data][:attributes][:hourly_weather]).to have_key(:wind_speed)
